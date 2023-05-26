@@ -94,6 +94,11 @@
   background-color:  #6272e0;
 }
 
+.centered-buttons {
+  display: flex;
+  justify-content: center;
+}
+
 .top-right {
   position: absolute;
   top: 20px;

@@ -28,7 +28,11 @@ const AvatarUpload: React.FC<AvatarUploadProps> = ({ onImageUpload }) => {
     }
   };
 
-  const handleImageCrop = () => {};
+  const handleImageCrop = () => {
+    // Lógica para recortar a imagem
+
+    console.log('Imagem recortada');
+  };
 
   const handleZoomChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const zoomValue = parseFloat(event.target.value);
@@ -48,13 +52,14 @@ const AvatarUpload: React.FC<AvatarUploadProps> = ({ onImageUpload }) => {
   };
 
   return (
-    <div className="button-container">
+    <div className="avatar-upload">
       {!image && !croppedImage && (
         <div className="upload-container">
           <input type="file" accept="image/*" onChange={handleImageUpload} />
           <p>Drop the image here or click to browse.</p>
         </div>
       )}
+
       {image && !croppedImage && (
         <div>
           <img src={image} alt="Imagem para recortar" />
@@ -92,7 +97,9 @@ const AvatarUpload: React.FC<AvatarUploadProps> = ({ onImageUpload }) => {
       )}
 
       <div className="top-right">
-      <button onClick={handleGoToHome} className="home-button">Ir para Home</button>
+        <button onClick={handleGoToHome} className="home-button">
+          Go Home
+        </button>
       </div>
     </div>
   );

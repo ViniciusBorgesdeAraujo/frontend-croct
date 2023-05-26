@@ -34,7 +34,30 @@ const Home: React.FC = () => {
           <button className="avatar-upload-button">Go to AvatarUpload</button>
         </Link>
       </section>
+
+      <Footer />
     </div>
+  );
+};
+
+const Footer: React.FC = () => {
+  return (
+    <footer>
+      <div className='footer-container'>
+        <p>
+          <span className='bold'>Avatar Uploader</span>
+          &copy; 2023
+        </p>
+        <div className='social-container'>
+         <span className="social">Siga-nos:</span>
+         <a href="#"><i className="fab fa-facebook fa-2x footericone"></i></a>
+         <a href="#"><i className="fab fa-instagram fa-2x footericone"></i></a>
+         <a href="#"><i className="fab fa-twitter-square fa-2x footericone"></i></a>
+         <a href="#"><i className="fab fa-youtube fa-2x footericone"></i></a>
+        </div>
+      </div>
+    </footer>
+    
   );
 };
 
